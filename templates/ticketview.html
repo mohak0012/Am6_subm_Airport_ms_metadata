@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticekt_View</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Ticket_No</th>
+      <th>Air_Name</th>
+      <th>Ticket_Price</th>
+      <th>Seat_No</th>
+      <th>Class</th>
+      <th>Arr</th>
+      <th>Depart</th>
+      <th>Duration</th>
+      <th>DO_Travel</th>
+      <th>P_Source</th>
+      <th>P_Dest</th>
+      <th>Terminal</th>
+      <th>P_ID</th>
+      <th>DO_Book</th>
+      <th>DO_Cancel</th>
+      <th>Charge</th>
+  
+      
+    </tr>
+      {% for tick in tickDetails %}
+      <tr>
+        <td> {{tick[0]}} </td>
+        <td> {{tick[1]}} </td>
+        <td> {{tick[2]}} </td>
+        <td> {{tick[3]}} </td>
+        <td> {{tick[4]}} </td>
+        <td> {{tick[5]}} </td>
+        <td> {{tick[6]}} </td>
+        <td> {{tick[7]}} </td>
+        <td> {{tick[8]}} </td>
+        <td> {{tick[9]}} </td>
+        <td> {{tick[10]}} </td>
+        <td> {{tick[11]}} </td>
+        <td> {{tick[12]}} </td>
+        <td> {{tick[13]}} </td>
+        <td> {{tick[14]}} </td>
+        <td> {{tick[15]}} </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <img src="/static/ticket.jpg" alt="">
+</body>
+</html>
+
+  

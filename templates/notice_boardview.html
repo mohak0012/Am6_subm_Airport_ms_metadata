@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notice_board_View</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+
+</head>
+<body>
+  <table>
+    <tr>
+      <th>NB_ID</th>
+      <th>Gate_No</th>
+      <th>NB_Arr</th>
+      <th>NB_Depart</th>
+      <th>NB_Source</th>
+      <th>NB_Dest</th>
+      <th>NB_Status</th>
+      <th>Terminal</th>
+    </tr>
+      {% for nb in nbDetails %}
+      <tr>
+        <td> {{nb[0]}} </td>
+        <td> {{nb[1]}} </td>
+        <td> {{nb[2]}} </td>
+        <td> {{nb[3]}} </td>
+        <td> {{nb[4]}} </td>
+        <td> {{nb[5]}} </td>
+        <td> {{nb[6]}} </td>
+        <td> {{nb[7]}} </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <img src="/static/notice_board.jpg" alt="">
+</body>
+</html>

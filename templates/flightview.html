@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight_View</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+
+</head>
+<body>
+  <table>
+    <tr>
+      <th>FNo</th>
+      <th>FSource</th>
+      <th>FDest</th>
+      <th>FDepart_Time</th>
+      <th>FArr_Time</th>
+      <th>FDuration</th>
+      <th>FStatus</th>
+      <th>Air_ID</th>
+    </tr>
+      {% for flight in flightDetails %}
+      <tr>
+        <td> {{flight[0]}} </td>
+        <td> {{flight[1]}} </td>
+        <td> {{flight[2]}} </td>
+        <td> {{flight[3]}} </td>
+        <td> {{flight[4]}} </td>
+        <td> {{flight[5]}} </td>
+        <td> {{flight[6]}} </td>
+        <td> {{flight[7]}} </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <img src="/static/airline.jpg" alt="">
+    
+</body>
+</html>

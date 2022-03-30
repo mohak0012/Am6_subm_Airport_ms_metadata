@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+  
+<h1><span>Employee</span></h1>
+
+<form method="POST" action="">
+    <p>
+      <label><u>Employee ID</u></label>
+      <input type="text" name="eid">
+    </p>
+    <br>
+    <p>
+      <label>Employee First Name</label>
+      <input type="text" name="efirst">
+    </p>
+    <br>
+    <p>
+      <label>Employee Last Name</label>
+      <input type="text" name="elast">
+    </p>
+    <br>
+    <p>
+      <label>Employee Street_Address</label>
+      <input type="text" name="estreet">
+    </p>
+    <br>
+    <p>
+      <label>Employee City_Address</label>
+      <input type="text" name="ecity">
+    </p>
+    <br>
+    <p>
+      <label>Employee State_Address</label>
+      <input type="text" name="estate">
+    </p>
+    <br>
+    <p>
+      <label>Employee PINCode_Address</label>
+      <input type="number" name="epin">
+    </p>
+    <br>
+    <p>
+      <label>Employee Mobile Number</label>
+      <input type="number" name="emn">
+    </p>
+    <br>
+    <p>
+      <label>Employee Gender(M/F/O)</label>
+      <input type="text" name="esex">
+    </p>
+    <br>
+    <p>
+      <label>Employee Date of Birth</label>
+      <input type="text" name="edob">
+    </p>
+    <br>
+    <p>
+      <label>Employee Salary</label>
+      <input type="number" name="esal">
+    </p>
+    <br>
+    <p>
+      <label>Employee Designation</label>
+      <input type="text" name="edes">
+    </p>
+    <br>
+    <p>
+      <label>Airport Name</label>
+      <input type="text" name="aname">
+    </p>
+    <br><br>
+  <input type="submit" name="emp" value="Insert">&nbsp;
+  <input type="submit" name="emp" value="Update">&nbsp;
+  <input type="submit" name="emp" value="Delete">&nbsp;
+  <input type="submit" name="emp" value="Show Table">
+  </form>
+  <img src="/static/employee.jpg" alt="">
+</body>
+</html>
+

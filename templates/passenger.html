@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passenger</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+  
+<h1><span>Passenger</span></h1>
+
+<form method="POST" action="">
+    <p>
+      <label><u>Passenger ID</u></label>
+      <input type="text" name="pid">
+    </p>
+    <br>
+    <p>
+      <label>Passenger Mobile Number</label>
+      <input type="number" name="pmno">
+    </p>
+    <br>
+    <p>
+      <label>Passenger First Name</label>
+      <input type="text" name="pfn">
+    </p>
+    <br>
+    <p>
+      <label>Passenger Last Name</label>
+      <input type="text" name="pln">
+    </p>
+    <br>
+    <p>
+      <label>Passenger Date of Birth</label>
+      <input type="text" name="pdob">
+    </p>
+    <br>
+    <p>
+      <label>Passenger gender(M/F/O)</label>
+      <input type="text" name="psex">
+    </p>
+    <br>
+    <p>
+      <label>Passesnger ID Type</label>
+      <input type="text" name="pidt">
+    </p>
+    <br>
+    <p>
+      <label>Passenger ID Number</label>
+      <input type="number" name="pidn">
+    </p>
+    <br><br>
+  <input type="submit" name="pass" value="Insert">&nbsp;
+  <input type="submit" name="pass" value="Update">&nbsp;
+  <input type="submit" name="pass" value="Delete">&nbsp;
+  <input type="submit" name="pass" value="Show Table">
+  </form>
+  <img src="/static/passenger.jpg" alt="">
+</body>
+</html>

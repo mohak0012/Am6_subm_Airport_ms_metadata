@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+  
+<h1><span>Flight</span></h1>
+
+
+<form method="POST" action="">
+    <p>
+      <label><u>Flight Number</u></label>
+      <input type="text" name="fno">
+    </p>
+    <br>
+    <p>
+      <label>Flight Source</label>
+      <input type="text" name="fsrc">
+    </p>
+    <br>
+    <p>
+      <label>Flight Destination</label>
+      <input type="text" name="fdest">
+    </p>
+    <br>
+    <p>
+      <label>Flight Departure Time</label>
+      <input type="text" name="fdepttime">
+    </p>
+    <br>
+    <p>
+      <label>Flight Arrival Time</label>
+      <input type="text" name="farrtime">
+    </p>
+    <br>
+    <p>
+      <label>Flight Duration</label>
+      <input type="text" name="fdur">
+    </p>
+    <br>
+    <p>
+      <label>Flight Status</label>
+      <input type="text" name="fstat">
+    </p>
+    <br>
+    <p>
+      <label>Airline ID</label>
+      <input type="text" name="airid">
+    </p>
+    <br><br>
+  <input type="submit" name="flight" value="Insert">&nbsp;
+  <input type="submit" name="flight" value="Update">&nbsp;
+  <input type="submit" name="flight" value="Delete">&nbsp;
+  <input type="submit" name="flight" value="Show Table">
+  </form>
+  <img src="/static/airline.jpg" alt="">
+</body>
+</html>

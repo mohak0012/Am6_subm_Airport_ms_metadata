@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee_Hand_View</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Emp_ID</th>
+      <th>P_ID</th>
+    </tr>
+    {% for emph in emphDetails %}
+    <tr>
+      <td> {{emph[0]}} </td>
+      <td> {{emph[1]}} </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <img src="/static/employee.jpg" alt="">
+</body>
+</html>
+
+
+  

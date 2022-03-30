@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>admin_supview</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Emp_id</th>
+      <th>astype</th>
+    </tr>
+    {% for admin in adminsupDetails %}
+    <tr>
+      <td> {{admin[0]}} </td>
+      <td> {{admin[1]}} </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <img src="/static/admin_support.jpg" alt="">
+  
+</body>
+</html>
+

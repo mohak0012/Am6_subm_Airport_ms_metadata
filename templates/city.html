@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>city</title>
+  <link rel="stylesheet" href= "{{ url_for('static',filename='styles/style.css') }}">
+
+</head>
+<body>
+  <h1><span>City</span></h1>
+
+<form method="POST" action="">
+  <p>
+    <label style="color:white"><u>City Name</u></label>
+    <input type="text" name="cname">
+  </p>
+  <br>
+  <p>
+    <label style="color:white">State</label>
+    <input type="text" name="state">
+  </p>
+  <br>
+  <p>
+    <label style="color:white">Country</label>
+    <input type="text" name="coun">
+  </p>
+  <br>
+
+  <input type="submit" name="sub" value="Insert">&nbsp;
+  <input type="submit" name="sub" value="Update">&nbsp;
+  <input type="submit" name="sub" value="Delete">&nbsp;
+  <input type="submit" name="sub" value="Show Table">
+
+  </form>
+  <img src="/static/city.jpg" alt="">
+</body>
+</html>

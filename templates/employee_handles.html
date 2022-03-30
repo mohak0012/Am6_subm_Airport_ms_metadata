@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee_handles</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+  <h1><span>Employee_handles</span></h1>
+
+<form method="POST" action="">
+    <p>
+      <label><u>Employee ID</u></label>
+      <input type="text" name="eid">
+    </p>
+    <br>
+    <p>
+      <label><u>Passenger ID</u></label>
+      <input type="text" name="pid">
+    </p>
+    <br><br>
+  <input type="submit" name="emph" value="Insert">&nbsp;
+  <input type="submit" name="emph" value="Update">&nbsp;
+  <input type="submit" name="emph" value="Delete">&nbsp;
+  <input type="submit" name="emph" value="Show Table">
+  </form>
+  <img src="/static/employee.jpg" alt="">
+</body>
+</html>
+
+

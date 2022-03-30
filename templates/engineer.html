@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineer</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+  
+<h1><span>Engineer</span></h1>
+
+<form method="POST" action="">
+    <p>
+      <label><u>Employee ID</u></label>
+      <input type="text" name="eid">
+    </p>
+    <br>
+    <p>
+      <label>Engineer Type</label>
+      <input type="text" name="etype">
+    </p>
+    <br><br>
+  <input type="submit" name="engi" value="Insert">&nbsp;
+  <input type="submit" name="engi" value="Update">&nbsp;
+  <input type="submit" name="engi" value="Delete">&nbsp;
+  <input type="submit" name="engi" value="Show Table">
+  </form>
+  <img src="/static/engineer.jpg" alt="">
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee_View</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Emp_ID</th>
+      <th>EFirst_Name</th>
+      <th>ELast_Name</th>
+      <th>E_Street</th>
+      <th>E_City</th>
+      <th>E_State</th>
+      <th>E_PINCode</th>
+      <th>Emp_MNo</th>
+      <th>Emp_Sex</th>
+      <th>Emp_DOB</th>
+      <th>Emp_Salary</th>
+      <th>EDesignation</th>
+      <th>A_Name</th>
+    </tr>
+    {% for emp in empDetails %}
+    <tr>
+      <td> {{emp[0]}} </td>
+      <td> {{emp[1]}} </td>
+      <td> {{emp[2]}} </td>
+      <td> {{emp[3]}} </td>
+      <td> {{emp[4]}} </td>
+      <td> {{emp[5]}} </td>
+      <td> {{emp[6]}} </td>
+      <td> {{emp[7]}} </td>
+      <td> {{emp[8]}} </td>
+      <td> {{emp[9]}} </td>
+      <td> {{emp[10]}} </td>
+      <td> {{emp[11]}} </td>
+      <td> {{emp[12]}} </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <img src="/static/employee.jpg" alt="">
+  
+</body>
+</html>
+

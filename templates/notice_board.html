@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notice_board</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+  <h1><span>Notice Board</span></h1>
+
+<form method="POST" action="">
+    <p>
+      <label><u>Notice Board ID</u></label>
+      <input type="text" name="nbid">
+    </p>
+    <br>
+    <p>
+      <label>Gate Number</label>
+      <input type="text" name="gno">
+    </p>
+    <br>
+    <p>
+      <label>Arrival Time</label>
+      <input type="text" name="arr">
+    </p>
+    <br>
+    <p>
+      <label>Departure Time</label>
+      <input type="text" name="dept">
+    </p>
+    <br>
+    <p>
+      <label>Source</label>
+      <input type="text" name="src">
+    </p>
+    <br>
+    <p>
+      <label>Destination</label>
+      <input type="text" name="dest">
+    </p>
+    <br>
+    <p>
+      <label>Status</label>
+      <input type="text" name="status">
+    </p>
+    <br>
+    <p>
+      <label>Terminal</label>
+      <input type="text" name="term">
+    </p>
+    <br><br>
+  <input type="submit" name="nb" value="Insert">&nbsp;
+  <input type="submit" name="nb" value="Update">&nbsp;
+  <input type="submit" name="nb" value="Delete">&nbsp;
+  <input type="submit" name="nb" value="Show Table">
+  </form>
+  <img src="/static/notice_board.jpg" alt="">
+</body>
+</html>
+

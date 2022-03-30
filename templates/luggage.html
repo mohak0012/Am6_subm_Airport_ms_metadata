@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luggage</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+  
+<h1><span>Luggage</span></h1>
+
+<form method="POST" action="">
+    <p>
+      <label><u>Passenger ID</u></label>
+      <input type="text" name="pid">
+    </p>
+    <br>
+    <p>
+      <label><u>Luggage ID</u></label>
+      <input type="text" name="lid">
+    </p>
+    <br>
+    <p>
+      <label><u>Number of Bags</u></label>
+      <input type="number" name="nob">
+    </p>
+    <br><br>
+  <input type="submit" name="lugg" value="Insert">&nbsp;
+  <input type="submit" name="lugg" value="Update">&nbsp;
+  <input type="submit" name="lugg" value="Delete">&nbsp;
+  <input type="submit" name="lugg" value="Show Table">
+  </form>
+  <img src="/static/luggage.jpg" alt="">
+</body>
+</html>

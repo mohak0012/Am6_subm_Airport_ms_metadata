@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airport_View</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+
+</head>
+<body>
+  <table>
+    <tr>
+      <th>A_Name</th>
+      <th>A_State</th>
+      <th>A_Country</th>
+      <th>City_Name</th>
+
+    </tr>
+    {% for airp in airpDetails %}
+    <tr>
+      <td> {{airp[0]}} </td>
+      <td> {{airp[1]}} </td>
+      <td> {{airp[2]}} </td>
+      <td> {{airp[3]}} </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <img src="/static/airport.jpg" alt="">
+</body>
+</html>
+
+  

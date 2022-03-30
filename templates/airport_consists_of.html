@@ -1,0 +1,32 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport_consists_of</title>
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+  </head>
+  <body>
+    <h1><span>Airport_consists_of</span></h1>
+
+  <form method="POST" action="">
+      <p>
+        <label><u>Airport Name</u></label>
+      <input type="text" name="aname">
+    </p>
+    <br>
+    <p>
+      <label><u>Airline ID</u></label>
+      <input type="text" name="airid">
+    </p>
+    <br><br>
+  <input type="submit" name="airpco" value="Insert">&nbsp;
+  <input type="submit" name="airpco" value="Update">&nbsp;
+  <input type="submit" name="airpco" value="Delete">&nbsp;
+  <input type="submit" name="airpco" value="Show Table">
+  </form>
+  <img src="/static/airport.jpg" alt="">
+</body>
+</html>
