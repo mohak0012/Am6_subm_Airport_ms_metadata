@@ -219,7 +219,6 @@ def airport_consists_of():
 def airportcoview():
     cur = mysql.connection.cursor()
     resultValue = cur.execute("SELECT * FROM airport_consists_of")
-    airpcoDetails = cur.fetchall()
     if resultValue > 0:
         airpcoDetails = cur.fetchall()
         return render_template('airport_consists_ofview.html',airpcoDetails=airpcoDetails)
@@ -530,7 +529,7 @@ def emp():
             edes = empDetails['edes']
             aname = empDetails['aname']
             cur = mysql.connection.cursor()
-            cur.execute("insert into employee values(%s, %s, %s, %s, %s, %s, %d, %d, %s, %s, %d, %s, %s)",(eid, efirst, elast, estreet, ecity, estate, epin, emn, esex, edob, esal, edes, aname))
+            cur.execute("insert into employee values(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",(eid, efirst, elast, estreet, ecity, estate, epin, emn, esex, edob, esal, edes, aname))
             mysql.connection.commit()
             cur.close()
         if request.form['emp'] == 'Update':
@@ -549,7 +548,7 @@ def emp():
             edes = empDetails['edes']
             aname = empDetails['aname']
             cur = mysql.connection.cursor()
-            cur.execute("update employee set efirst_name=%s, elast_name=%s, e_street=%s, e_city=%s, E_state=%s, e_pincode=%d, emp_mno=%d, emp_sex=%s, emp_dob=%s, emp_salary=%s, Edesignation=%s, a_name=%s where emp_id=%s", (efirst, elast, estreet, ecity, estate, epin, emn, esex, edob, esal, edes, aname, eid))
+            cur.execute("update employee set efirst_name=%s, elast_name=%s, e_street=%s, e_city=%s, E_state=%s, e_pincode=%s, emp_mno=%s, emp_sex=%s, emp_dob=%s, emp_salary=%s, Edesignation=%s, a_name=%s where emp_id=%s", (efirst, elast, estreet, ecity, estate, epin, emn, esex, edob, esal, edes, aname, eid))
             mysql.connection.commit()
             cur.close()
         if request.form['emp'] == 'Delete':
@@ -600,7 +599,7 @@ def emphandles():
             eid = emphDetails['eid']
             pid = emphDetails['pid']
             cur = mysql.connection.cursor()
-            cur.execute("insert into flight_info values(%s, %s)",(eid, pid))
+            cur.execute("insert into employee_handles values(%s, %s)",(eid, pid))
             mysql.connection.commit()
             cur.close()
         if request.form['emph'] == 'Update':
@@ -616,7 +615,7 @@ def emphandles():
             eid = emphDetails['eid']
             pid = emphDetails['pid']
             cur = mysql.connection.cursor()
-            cur.execute("delete from emph where emp_id = %s and p_id = %s", (eid, pid))
+            cur.execute("delete from employee_handles where emp_id = %s and p_id = %s", (eid, pid))
             mysql.connection.commit()
             cur.close()
         
@@ -654,7 +653,7 @@ def passenger():
             pidt = passDetails['pidt']
             pidn = passDetails['pidn']
             cur = mysql.connection.cursor()
-            cur.execute("insert into passenger values(%s, %d, %s, %s, %s, %s, %d, %s)",(pid, pmno, pfn, pln, pdob, psex, pidn, pidt))
+            cur.execute("insert into passenger values(%s, %s, %s, %s, %s, %s, %s, %s)",(pid, pfn, pln, pmno, pdob, psex, pidn, pidt))
             mysql.connection.commit()
             cur.close()
         if request.form['pass'] == 'Update':
@@ -668,7 +667,7 @@ def passenger():
             pidt = passDetails['pidt']
             pidn = passDetails['pidn']
             cur = mysql.connection.cursor()
-            cur.execute("update passenger set pfirst_name=%s, plast_name=%s, p_mno=%d, p_dob=%s, p_sex=%s, p_idno=%d, p_idtype=%s where p_id=%s", (pfn, pln, pmno, pdob, psex, pidn, pidt, pid))
+            cur.execute("update passenger set pfirst_name=%s, plast_name=%s, p_mno=%s, p_dob=%s, p_sex=%s, p_idno=%s, p_idtype=%s where p_id=%s", (pfn, pln, pmno, pdob, psex, pidn, pidt, pid))
             mysql.connection.commit()
             cur.close()
         if request.form['pass'] == 'Delete':
@@ -728,7 +727,7 @@ def ticket():
             doc = tickDetails['doc']
             charge = tickDetails['charge']
             cur = mysql.connection.cursor()
-            cur.execute("insert into ticket values(%s, %s, %d, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %d)",(tno, airname, tprice, seatno, classcategory, arr, dept, dura, dot, psrc, pdest, term, pid, dob, doc, charge))
+            cur.execute("insert into ticket values(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",(tno, airname, tprice, seatno, classcategory, arr, dept, dura, dot, psrc, pdest, term, pid, dob, doc, charge))
             mysql.connection.commit()
             cur.close()
         if request.form['tick'] == 'Update':
@@ -750,7 +749,7 @@ def ticket():
             doc = tickDetails['doc']
             charge = tickDetails['charge']
             cur = mysql.connection.cursor()
-            cur.execute("update ticket set air_name=%s, ticket_price=%d, seat_no=%s, class=%s, arr=%s, depart=%s, duration=%s, do_travel=%s, p_source=%s, p_dest=%s, terminal=%s, p_id=%s, do_book=%s, do_cancel=%s, charge=%d where ticket_no=%s", (airname, tprice, seatno, classcategory, arr, dept, dura, dot, psrc, pdest, term, pid, dob, doc, charge, tno))
+            cur.execute("update ticket set air_name=%s, ticket_price=%s, seat_no=%s, class=%s, arr=%s, depart=%s, duration=%s, do_travel=%s, p_source=%s, p_dest=%s, terminal=%s, p_id=%s, do_book=%s, do_cancel=%s, charge=%s where ticket_no=%s", (airname, tprice, seatno, classcategory, arr, dept, dura, dot, psrc, pdest, term, pid, dob, doc, charge, tno))
             mysql.connection.commit()
             cur.close()
         if request.form['tick'] == 'Delete':
@@ -776,7 +775,7 @@ def ticket():
             mysql.connection.commit()
             cur.close()
         
-        return redirect('/tickview')
+        return redirect('/ticketview')
     return render_template('ticket.html')
 
 # ticket view
@@ -890,7 +889,7 @@ def engineerview():
 @app.route('/luggage', methods=['GET', 'POST'])
 def luggage():
     if request.method == 'POST':
-        if request.form['luggage'] == 'Show Table':
+        if request.form['lugg'] == 'Show Table':
             # Fetch form data
             return redirect('/luggageview')
 
@@ -901,7 +900,7 @@ def luggage():
             lid = luggageDetails['lid']
             nob = luggageDetails['nob']
             cur = mysql.connection.cursor()
-            cur.execute("insert into luggage values(%s, %s, %d)",(pid, lid, nob))
+            cur.execute("insert into luggage values(%s, %s, %s)",(pid, lid, nob))
             mysql.connection.commit()
             cur.close()
         if request.form['lugg'] == 'Update':
@@ -910,7 +909,7 @@ def luggage():
             lid = luggageDetails['lid']
             nob = luggageDetails['nob']
             cur = mysql.connection.cursor()
-            cur.execute("update luggage set p_id=%s, no_of_bags=%d where luggage_id=%s", (pid, nob, lid))
+            cur.execute("update luggage set p_id=%s, no_of_bags=%s where luggage_id=%s", (pid, nob, lid))
             mysql.connection.commit()
             cur.close()
         if request.form['lugg'] == 'Delete':
@@ -952,7 +951,7 @@ def con_flight():
             layt = confDetails['layt']
             nos = confDetails['nos']
             cur = mysql.connection.cursor()
-            cur.execute("insert into connecting_flight values(%s, %s, %d)",(fno, layt, nos))
+            cur.execute("insert into connecting_flight values(%s, %s, %s)",(fno, layt, nos))
             mysql.connection.commit()
             cur.close()
         if request.form['conf'] == 'Update':
@@ -961,7 +960,7 @@ def con_flight():
             layt = confDetails['layt']
             nos = confDetails['nos']
             cur = mysql.connection.cursor()
-            cur.execute("update connecting_flight set no_of_stops=%d, layover_time=%s where fno=%s", (nos, layt, fno))
+            cur.execute("update connecting_flight set no_of_stops=%s, layover_time=%s where fno=%s", (nos, layt, fno))
             mysql.connection.commit()
             cur.close()
         if request.form['conf'] == 'Delete':
@@ -998,10 +997,11 @@ def ns_flight():
 
         if request.form['ns'] == 'Insert':
             # Fetch form data
-            nsDetails = request.form
+            nsDetails = dict((key, request.form.getlist(key)) for key in request.form.keys())
             fno = nsDetails['fno']
+            print(nsDetails)
             cur = mysql.connection.cursor()
-            cur.execute("insert into non_stop_flight values(%s)",(fno))
+            cur.execute("insert into non_stop_flight values(%s)", (fno))
             mysql.connection.commit()
             cur.close()
         if request.form['ns'] == 'Update':

@@ -12,13 +12,14 @@
   <table>
     <tr>
       <th>FNo</th>
-      <th>NB_ID</th>
       <th>P_ID</th>
+      <th>NB_ID</th>
     </tr>
     {% for fpt in fptDetails %}
     <tr>
       <td> {{fpt[0]}} </td>
       <td> {{fpt[1]}} </td>
+      <td> {{fpt[2]}} </td>
     </tr>
     {% endfor %}
   </table>
